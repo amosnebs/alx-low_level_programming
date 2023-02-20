@@ -1,4 +1,4 @@
-#include <stdio>
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	int ch - 'a';
+	int ch = 'a';
 
 	while (ch <= 'z')
 	{
