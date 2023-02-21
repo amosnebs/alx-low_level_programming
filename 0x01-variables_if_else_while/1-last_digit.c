@@ -1,33 +1,37 @@
 #include <stdio.h>
+
 #include <stdlib.h>
+
 #include <time.h>
+
+
+
 /**
- * main - main function to generate a random number
- *
+ * main - prints a text according to number
  * Return: Always 0 (Success)
  *
  */
+
 int main(void)
 {
-	int n;
-	int num;
+	int n; lastd;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	print("Last digit of %d is ", n);
-	num = n % 10;
-	if (num > 5)
-	{
-		printf("%d and is greater than 5\n", num);
-	}
-	else if (num < 6) &&(num < 0))
+	lastd = n % 10;
 
+	if (lastd > 5)
 	{
-		printf("%d and is less than 6 and not 0\n", num);
+	printf("Last digit of %d is %d and is greater than 5\n", n, lastd;
 	}
-	else
+	else if (lastd == 0)
 	{
-		printf("%d and is 0\n", num);
+	printf("Last digit of %d is %d and is 0\n", n, lastd);
+	}
+	else if (lastd < 6 && lastd != 0)
+	{
+	printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lastd;
 	}
 	return (0);
+
 }
