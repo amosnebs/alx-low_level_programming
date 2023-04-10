@@ -27,7 +27,7 @@ unsigned int binary_to_uint(const char *b)
 			number += (1 * (1 << night));/*<< bitwise left shift operator*/
 		sum++;
 
-		count--;
+		night--;
 	}
 	return (sum);
 }
