@@ -2,28 +2,32 @@
 
 /**
  * binary_to_uint - Converts a binary number to an unsigned int
- * @b: Binary
- *
+ * @b: The binary string to convert
  * Return: unsigned int
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int len = 0, count = 0, sum = 0;
+
+	int night = 0, sum;
+	unsigned int number = 0, non_binary = 0;
 
 	if (b == NULL)
 		return (non_binary);
 
-	len = _strlen(b);
-	while (len--)
+	while (b[night] != '\0')
+		night++;
+	night -= 1;
+	sum = 0;
+	while (b[sum])
 	{
-		if (b[len] != 48 && b[len] != 49)
-			return (0);
+		if ((b[sum] != '0') && (b[sum] != '1'))/*&& logical AND operator*/
+			return (non_binary);
 
-		if (b[len] == 49)
-			sum += 1 << count;
+		if (b[sum] == '1')
+			number += (1 * (1 << night));/*<< bitwise left shift operator*/
+		sum++;
 
-		count++;
+		count--;
 	}
-
-	return (number);
+	return (sum);
 }
